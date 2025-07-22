@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="editLpoAnchor" prefHeight="536.0" prefWidth="921.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.EditLpoController">
+   <children>
+      <AnchorPane fx:id="editLpoDetailsAnchor" layoutX="4.0" layoutY="188.0" prefHeight="343.0" prefWidth="913.0">
+         <children>
+            <Label fx:id="editLpoAmountLabel" alignment="CENTER" layoutX="764.0" layoutY="305.0" prefHeight="33.0" prefWidth="154.0">
+               <font>
+                  <Font name="Times New Roman" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="706.0" layoutY="305.0" prefHeight="33.0" prefWidth="56.0" text="KSHS" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TableView fx:id="editLpoTable" layoutX="6.0" layoutY="6.0" prefHeight="295.0" prefWidth="913.0">
+              <columns>
+                <TableColumn prefWidth="75.0" style="-fx-alignment: center;" text="CODE">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="code" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="351.0" text="DESCRIPTION">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="description" />
+                   </cellValueFactory>
+                </TableColumn>
+                  <TableColumn prefWidth="75.0" style="-fx-alignment: center;" text="UNITS">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="units" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" style="-fx-alignment: center;" text="QUANTITY">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="quantity" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="costInclCol" prefWidth="108.0" style="-fx-alignment: center;" text="COST INCL.">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="costInclusive" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="vatCol" prefWidth="87.0" style="-fx-alignment: center;" text="VAT">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="vat" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="amountCol" prefWidth="140.0" style="-fx-alignment: center;" text="AMOUNT">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="totalCost" />
+                     </cellValueFactory>
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <Button fx:id="editLpoDoneButton" layoutX="6.0" layoutY="306.0" mnemonicParsing="false" onAction="#saveLpo" prefHeight="31.0" prefWidth="85.0" text="Done">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/approve.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="editLpoTopAnchor" layoutX="4.0" layoutY="35.0" prefHeight="150.0" prefWidth="919.0">
+         <children>
+            <TextField fx:id="editLpoCodeField" layoutX="6.0" layoutY="100.0" prefHeight="33.0" prefWidth="108.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="editLpoDescField" editable="false" layoutX="117.0" layoutY="100.0" prefHeight="33.0" prefWidth="321.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="editLpoUnitsField" editable="false" layoutX="448.0" layoutY="100.0" prefHeight="33.0" prefWidth="44.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="editLpoQtyField" layoutX="499.0" layoutY="100.0" prefHeight="33.0" prefWidth="68.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="editLpoVatField" editable="false" layoutX="654.0" layoutY="100.0" prefHeight="33.0" prefWidth="74.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="editLpoAmountField" editable="false" layoutX="734.0" layoutY="100.0" prefHeight="33.0" prefWidth="108.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="6.0" layoutY="83.0" prefHeight="17.0" prefWidth="44.0" text="Code" />
+            <Label layoutX="117.0" layoutY="83.0" prefHeight="17.0" prefWidth="68.0" text="Description" />
+            <Label layoutX="448.0" layoutY="83.0" prefHeight="17.0" prefWidth="44.0" text="Units" />
+            <Label layoutX="499.0" layoutY="83.0" prefHeight="17.0" prefWidth="56.0" text="Quantity" />
+            <Label layoutX="654.0" layoutY="83.0" prefHeight="17.0" prefWidth="44.0" text="Vat" />
+            <Label layoutX="734.0" layoutY="83.0" prefHeight="17.0" prefWidth="44.0" text="Amount" />
+            <TextField fx:id="editLpoCostField" editable="false" layoutX="574.0" layoutY="100.0" prefHeight="33.0" prefWidth="74.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="574.0" layoutY="83.0" prefHeight="17.0" prefWidth="56.0" text="Cost" />
+            <Label layoutY="14.0" text="LPO Number" />
+            <Label fx:id="editLpoLpoNumber" alignment="CENTER" layoutX="6.0" layoutY="38.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="editLpoSaveButton" layoutX="851.0" layoutY="101.0" mnemonicParsing="false" onAction="#insertNewChanges" prefHeight="25.0" prefWidth="56.0" text="Save">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="editLpoTitleAnchor" layoutX="-1.0" layoutY="-1.0" prefHeight="33.0" prefWidth="929.0">
+         <children>
+            <Button fx:id="editLpoCloseButton" layoutX="877.0" layoutY="4.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="50.0" text="X" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

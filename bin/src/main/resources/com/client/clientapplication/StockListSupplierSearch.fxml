@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="stockListSupplierSearchAnchor" prefHeight="309.0" prefWidth="713.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.StockListSupplierSearchController">
+   <children>
+      <AnchorPane fx:id="stockListSupplierSearchDetailsAnchor" layoutX="3.0" layoutY="3.0" prefHeight="303.0" prefWidth="707.0">
+         <children>
+            <TextField fx:id="stockListSupplierSearchTextField" layoutX="4.0" layoutY="3.0" prefHeight="36.0" prefWidth="510.0" promptText="Enter product name" />
+            <TableView fx:id="stockListSupplierSearchTable" layoutX="4.0" layoutY="40.0" prefHeight="210.0" prefWidth="698.0">
+               <columns>
+                  <TableColumn editable="false" prefWidth="696.0" text="Supplier Name">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="identity" />
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+            <Button fx:id="stockListSupplierSearchButton" disable="true" layoutX="586.0" layoutY="254.0" mnemonicParsing="false" onAction="#acceptSupplier" prefHeight="41.0" prefWidth="107.0" text="Accept">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/done.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

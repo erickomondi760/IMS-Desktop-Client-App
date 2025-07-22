@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="invoicingAnchor" prefHeight="745.0" prefWidth="1560.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.InvoicingController">
+   <children>
+      <AnchorPane fx:id="invoicintTitleAnchor" prefHeight="35.0" prefWidth="1560.0">
+         <children>
+            <Label fx:id="invoicingTitleLabel" layoutX="14.0" layoutY="-2.0" prefHeight="35.0" prefWidth="143.0" text="Invoicing module">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="invoicingAnchor1" layoutX="4.0" layoutY="39.0" prefHeight="167.0" prefWidth="664.0">
+         <children>
+            <Label fx:id="invoicingBranchDetailsText" layoutX="204.0" layoutY="6.0" prefHeight="30.0" prefWidth="209.0" text="Branch &amp; Client Details" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="85.0" prefHeight="25.0" prefWidth="55.0" text="Banch">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="invoicingBranchText" layoutX="82.0" layoutY="84.0" prefHeight="27.0" prefWidth="209.0" />
+            <Label layoutX="8.0" layoutY="44.0" prefHeight="25.0" prefWidth="68.0" text="Company">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="131.0" text="Client">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="invoicingClientText" layoutX="82.0" layoutY="131.0" prefHeight="25.0" prefWidth="209.0" />
+            <Label layoutX="308.0" layoutY="85.0" text="Transporter">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="invoicingTransporter" layoutX="435.0" layoutY="85.0" prefHeight="25.0" prefWidth="215.0" />
+            <Label layoutX="308.0" layoutY="131.0" text="Vehicle number">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="invoicingVehicleNumber" layoutX="435.0" layoutY="131.0" prefHeight="25.0" prefWidth="215.0" />
+            <AnchorPane layoutX="119.0" layoutY="185.0" prefHeight="35.0" prefWidth="200.0" />
+            <ComboBox fx:id="invoicingCompanyCombo" layoutX="82.0" layoutY="44.0" prefHeight="30.0" prefWidth="209.0" />
+            <Label layoutX="308.0" layoutY="47.0" text="Outlet">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="invoicingOutlet" layoutX="435.0" layoutY="44.0" prefHeight="25.0" prefWidth="215.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="invoicingAnchor2" layoutX="4.0" layoutY="209.0" prefHeight="528.0" prefWidth="664.0">
+         <children>
+            <Label fx:id="invoicingProductDetailsLable" layoutX="234.0" layoutY="-1.0" prefHeight="30.0" prefWidth="136.0" text="Product Details" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="invoiceProductsTable" layoutX="2.0" layoutY="90.0" prefHeight="435.0" prefWidth="656.0">
+              <columns>
+                  <TableColumn prefWidth="122.0" text="Supplier">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="supplier" />
+                      </cellValueFactory>
+                  </TableColumn>
+                <TableColumn prefWidth="126.0" text="Barcode">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="barcode" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="94.0" text="Code">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="code" />
+                   </cellValueFactory>
+                </TableColumn>
+                  <TableColumn prefWidth="311.0" text="Description">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="description" />
+                     </cellValueFactory>
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <TextField fx:id="invoicingSearchLabel" layoutX="305.0" layoutY="50.0" prefHeight="30.0" prefWidth="314.0" promptText="Enter  a product detail" />
+            <CheckBox fx:id="productCheckBox" layoutX="625.0" layoutY="47.0" mnemonicParsing="false" onAction="#filterProductsTable" prefHeight="35.0" prefWidth="25.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+            <ComboBox fx:id="invoicingProducerText" layoutX="4.0" layoutY="50.0" prefHeight="30.0" prefWidth="298.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="invoicingAnchor3" layoutX="671.0" layoutY="39.0" prefHeight="143.0" prefWidth="887.0">
+         <children>
+            <Label fx:id="invoicingQtyStocktitle" layoutX="203.0" layoutY="14.0" prefHeight="30.0" prefWidth="225.0" text="Quantity &amp; Stock Details" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="103.0" prefHeight="25.0" prefWidth="68.0" text="Quantity">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="47.0" prefHeight="25.0" prefWidth="68.0" text="Code">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="invoicingCodeText" layoutX="94.0" layoutY="47.0" prefHeight="25.0" prefWidth="92.0" />
+            <Label layoutX="224.0" layoutY="47.0" prefHeight="25.0" prefWidth="79.0" text="Desription">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="invoicingDescriptionText" layoutX="316.0" layoutY="47.0" prefHeight="27.0" prefWidth="547.0" />
+            <TextField fx:id="invoicingQuantityText" layoutX="95.0" layoutY="103.0" prefHeight="25.0" prefWidth="92.0" />
+            <Label layoutX="225.0" layoutY="103.0" prefHeight="25.0" prefWidth="68.0" text="Stock Bal.">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="invoicingStockText" layoutX="317.0" layoutY="103.0" prefHeight="25.0" prefWidth="92.0" />
+            <Label layoutX="610.0" layoutY="103.0" prefHeight="25.0" prefWidth="68.0" text="Discount">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="invoicingDiscountText" layoutX="687.0" layoutY="103.0" prefHeight="25.0" prefWidth="92.0" />
+            <Button fx:id="invoicingSaveButton" layoutX="806.0" layoutY="104.0" mnemonicParsing="false" onAction="#addIntoInvoiceTable" prefHeight="25.0" prefWidth="55.0" text="Save" />
+            <Label layoutX="429.0" layoutY="104.0" prefHeight="25.0" prefWidth="41.0" text="Cost">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="invoicingCostText" layoutX="471.0" layoutY="104.0" prefHeight="25.0" prefWidth="127.0" />
+            <Label fx:id="invoiceBarode" layoutX="316.0" layoutY="72.0" prefHeight="18.0" prefWidth="159.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="670.0" layoutY="44.0" orientation="VERTICAL" prefHeight="683.0" prefWidth="4.0" />
+      <AnchorPane fx:id="invoicingAnchor4" layoutX="675.0" layoutY="184.0" prefHeight="553.0" prefWidth="881.0">
+         <children>
+            <Label layoutX="362.0" layoutY="-1.0" prefHeight="25.0" prefWidth="136.0" text="Invoice Details" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="invoiceTable" layoutX="4.0" layoutY="77.0" prefHeight="300.0" prefWidth="874.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="Code">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="code" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="68.0" text="Barcode">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="barcode" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="272.0" text="Description">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="description" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="49.0" text="Qty">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="quantity" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="63.0" text="Vat">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="vat" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="58.0" text="Disc">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="disc" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="112.0" text="Cost PrelVat">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="costExclusive" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="76.0" text="Cost InclVat">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="costInclusive" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="99.0" text="Total Cost">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="amountInclusive" />
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+            <AnchorPane fx:id="invoicingFilterAnchor1" layoutX="3.0" layoutY="29.0" prefHeight="47.0" prefWidth="874.0">
+               <children>
+                  <TextField fx:id="invoicingSearchLabel1" layoutX="18.0" layoutY="10.0" prefHeight="27.0" prefWidth="838.0" promptText="Enter  a product detail" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="623.0" layoutY="383.0" prefHeight="25.0" prefWidth="92.0" text="Total PreVat">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label layoutX="623.0" layoutY="426.0" prefHeight="25.0" prefWidth="92.0" text="Vat">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="623.0" layoutY="508.0" prefHeight="25.0" prefWidth="92.0" text="Total InclVat">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="invoiceSubTotal" layoutX="730.0" layoutY="383.0" prefHeight="25.0" prefWidth="143.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <TextField fx:id="invoiceVat" layoutX="730.0" layoutY="426.0" prefHeight="25.0" prefWidth="143.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <TextField fx:id="invoiceTotal" layoutX="730.0" layoutY="507.0" prefHeight="25.0" prefWidth="143.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <Button fx:id="createInvoice" layoutX="14.0" layoutY="506.0" mnemonicParsing="false" onAction="#invoice" prefHeight="35.0" prefWidth="92.0" text="Invoice">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/approve.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label layoutX="623.0" layoutY="471.0" prefHeight="25.0" prefWidth="92.0" text="Discount">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="invoiceTotalDiscount" layoutX="730.0" layoutY="467.0" prefHeight="32.0" prefWidth="143.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adjustmentDataAchor" prefHeight="615.0" prefWidth="1091.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.AdjustmentDataController">
+   <children>
+      <AnchorPane fx:id="adjustmentTitleAnchor" layoutX="-4.0" layoutY="-4.0" prefHeight="37.0" prefWidth="1100.0">
+         <children>
+            <Label layoutX="8.0" layoutY="6.0" text="Adjustment Data">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="adjustmentDetailsAnchor" layoutX="3.0" layoutY="36.0" prefHeight="576.0" prefWidth="1089.0">
+         <children>
+            <TableView fx:id="adjustmentTable" layoutX="4.0" layoutY="76.0" prefHeight="496.0" prefWidth="1081.0">
+              <columns>
+                <TableColumn prefWidth="231.0" text="Date">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="adjustmentDate" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="189.0" text="Comment">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="adjustmentReason" />
+                   </cellValueFactory>
+                </TableColumn>
+                  <TableColumn id="ajustmentTableColumnAjdstNo" prefWidth="167.0" text="Adjustment Number">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="adjustmentNumber" />
+                     </cellValueFactory>
+                  </TableColumn>
+               <TableColumn id="ajustmentTableColumnAjdstQty" prefWidth="167.0" text="Adjusted Quantity">
+                  <cellValueFactory>
+                     <PropertyValueFactory property="adjustedQuantity" />
+                  </cellValueFactory>
+               </TableColumn>
+                  <TableColumn id="ajustmentTableColumnAjdstValue" prefWidth="157.0" text="Adjusted Value">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="adjustmentValue" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="168.0" text="User Name">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="userName" />
+                     </cellValueFactory>
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <AnchorPane fx:id="adjustmentMenueAnchor" layoutX="4.0" layoutY="3.0" prefHeight="72.0" prefWidth="1081.0">
+               <children>
+                  <Button fx:id="adjustmentDeleteButton" contentDisplay="TOP" graphicTextGap="3.0" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" onAction="#deleteAdjustment" prefHeight="55.0" prefWidth="72.0" text="Delete">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/delete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <DatePicker fx:id="adjustmentDatadateTo" layoutX="809.0" layoutY="32.0" />
+                  <DatePicker fx:id="adjustmentDatadateFrom" layoutX="571.0" layoutY="32.0" />
+                  <Label layoutX="571.0" layoutY="10.0" text="Date From">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="809.0" layoutY="10.0" text="Date To">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="adjustmentDataRefreshButton" layoutX="1031.0" layoutY="34.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/done.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="clientTraderOutlet" prefHeight="547.0" prefWidth="606.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.ClientTraderOutletController">
+   <children>
+      <AnchorPane fx:id="clientTraderOutletTitleAnchor" layoutX="-1.0" layoutY="-2.0" prefHeight="47.0" prefWidth="607.0">
+         <children>
+            <Label layoutX="14.0" layoutY="8.0" text="Client Outlet">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="clientTraderOutletDetailsAnchor" layoutX="3.0" layoutY="48.0" prefHeight="496.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="clientTraderOutletDetailsButton" layoutX="513.0" layoutY="441.0" mnemonicParsing="false" onAction="#addOutlet" prefHeight="41.0" prefWidth="76.0" text="Save">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/done.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="14.0" layoutY="83.0" prefHeight="17.0" prefWidth="76.0" text="Location">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="205.0" prefHeight="30.0" prefWidth="133.0" text="Email address">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="267.0" prefHeight="30.0" prefWidth="159.0" text="Alt.Email address">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="329.0" prefHeight="30.0" prefWidth="143.0" text="Phone number">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="395.0" prefHeight="30.0" prefWidth="178.0" text="Alt. Phone number">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="clientTraderOutletLocation" layoutX="229.0" layoutY="83.0" prefHeight="25.0" prefWidth="284.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="clientTraderOutletEmail" layoutX="229.0" layoutY="203.0" prefHeight="25.0" prefWidth="284.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="clientTraderOutletAltEmail" layoutX="229.0" layoutY="265.0" prefHeight="25.0" prefWidth="284.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="clientTraderOutletPhone" layoutX="229.0" layoutY="327.0" prefHeight="25.0" prefWidth="284.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="clientTraderOutletAltPhone" layoutX="229.0" layoutY="393.0" prefHeight="25.0" prefWidth="284.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="clientsOutletCombo" layoutX="229.0" layoutY="25.0" prefHeight="37.0" prefWidth="284.0" />
+            <Label layoutX="19.0" layoutY="28.0" prefHeight="17.0" prefWidth="76.0" text="Client">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="148.0" prefHeight="30.0" prefWidth="133.0" text="Address">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="clientTraderOutletAddress" layoutX="229.0" layoutY="146.0" prefHeight="25.0" prefWidth="284.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

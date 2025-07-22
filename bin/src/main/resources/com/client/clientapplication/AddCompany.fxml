@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="companyAnchor" prefHeight="537.0" prefWidth="947.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.AddCompanyController">
+   <children>
+      <AnchorPane fx:id="companyTitleAnchor" prefHeight="37.0" prefWidth="947.0">
+         <children>
+            <Label layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="126.0" text="Company Details">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="companyDetailsAnchor" layoutX="4.0" layoutY="42.0" prefHeight="491.0" prefWidth="939.0">
+         <children>
+            <Label layoutX="14.0" layoutY="58.0" text="Name">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="114.0" text="Email">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="179.0" text="Alt. Email">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="362.0" text="Address">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="497.0" layoutY="58.0" prefHeight="25.0" prefWidth="68.0" text="Street">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="497.0" layoutY="305.0" text="Bussiness Type">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="497.0" layoutY="114.0" text="Date created">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="497.0" layoutY="174.0" text="Date opened">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="companyDateCreated" layoutX="633.0" layoutY="115.0" prefHeight="30.0" prefWidth="292.0" />
+            <DatePicker fx:id="companyDateOpened" layoutX="633.0" layoutY="177.0" prefHeight="30.0" prefWidth="292.0" />
+            <TextField fx:id="companyNameText" layoutX="94.0" layoutY="56.0" prefHeight="25.0" prefWidth="292.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <TextField fx:id="companyEmailText" layoutX="93.0" layoutY="114.0" prefHeight="25.0" prefWidth="292.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <TextField fx:id="companyAltEmailText" layoutX="94.0" layoutY="176.0" prefHeight="25.0" prefWidth="292.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <TextField fx:id="companyAddressTextField" layoutX="93.0" layoutY="360.0" prefHeight="25.0" prefWidth="292.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <TextField fx:id="companyStreetText" layoutX="633.0" layoutY="56.0" prefHeight="32.0" prefWidth="292.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <Button fx:id="companyCreateButton" layoutX="839.0" layoutY="446.0" mnemonicParsing="false" onAction="#createACompany" prefHeight="40.0" prefWidth="92.0" text="Save">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/done.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <TextField fx:id="companyBussinessTextField" layoutX="633.0" layoutY="303.0" prefHeight="30.0" prefWidth="292.0" />
+            <Label fx:id="companyDetailsTitleLabel" layoutX="384.0" layoutY="14.0" prefHeight="27.0" prefWidth="203.0" text="Create A New Company" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="239.0" text="Pnone">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="304.0" text="Alt. Phone">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="companyPhoneText" layoutX="93.0" layoutY="239.0" prefHeight="25.0" prefWidth="292.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="companyAltNumberText" layoutX="94.0" layoutY="301.0" prefHeight="25.0" prefWidth="292.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="498.0" layoutY="242.0" text="Website">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="companyWebsiteTextField" layoutX="633.0" layoutY="240.0" prefHeight="30.0" prefWidth="292.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

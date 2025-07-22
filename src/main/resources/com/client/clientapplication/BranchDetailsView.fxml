@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="branchDetailsViewAnchor" prefHeight="419.0" prefWidth="1183.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.BranchDetailsViewController">
+   <children>
+      <AnchorPane fx:id="branchDetailsViewBodyAnchor" layoutX="7.0" prefHeight="419.0" prefWidth="1176.0">
+         <children>
+            <Label fx:id="branchDetailsViewLabel" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="126.0" text="Branch Details">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TableView fx:id="branchDetailsViewTable" layoutX="11.0" layoutY="69.0" prefHeight="310.0" prefWidth="1167.0">
+               <columns>
+                  <TableColumn prefWidth="106.0" text="Company">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="companyName" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="88.0" text="Branch">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="branchName" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="101.0" text="Branch number">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="branchNumber" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="72.0" text="Location">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="branchLocation" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="97.0" text="Street">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="street" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="57.0" text="IP">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="serverIp" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="88.0" text="Created by">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="userName" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="119.0" text="Date created">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="dateCreated" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="136.0" text="Date Opened">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="dateOpened" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="97.0" text="Email">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="dateOpened" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="97.0" text="Alt.Email">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="dateOpened" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="113.0" text="Phone Number">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="dateOpened" />
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+            <Label layoutX="14.0" layoutY="384.0" prefHeight="17.0" prefWidth="64.0" text="Count">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="branchDetailsViewCount" alignment="CENTER" layoutX="90.0" layoutY="383.0" prefHeight="27.0" prefWidth="53.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="branchDetailsViewTextField" layoutX="172.0" layoutY="35.0" prefHeight="27.0" prefWidth="1007.0" />
+            <CheckBox fx:id="searchBranch" layoutX="18.0" layoutY="35.0" mnemonicParsing="false" text="Branch search">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

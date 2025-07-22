@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="homeAnchor" prefHeight="843.0" prefWidth="1978.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.HomeController">
+   <children>
+
+
+       <HBox fx:id="hbox" alignment="CENTER_LEFT" layoutY="32.0" prefHeight="99.0" prefWidth="1978.0">
+
+               <Button fx:id="purchaseButton" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" onAction="#openPurchaseMenuBar" prefHeight="76.0" prefWidth="94.0" text="Purchase" textFill="WHITE">
+            <font>
+               <Font size="17.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="39.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@Images/order.png" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
+               <Button fx:id="invoicingButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#openInvoiceMenuBar" prefHeight="71.0" prefWidth="94.0" text="Invoicing" textFill="#fcfcfc">
+            <font>
+               <Font size="17.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="36.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@Images/invoice1.png" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
+               <Button fx:id="invButton" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" onAction="#openInventoryMenuBar" prefHeight="74.0" prefWidth="94.0" text="Inventory" textFill="#fcfcfc">
+                   <font>
+
+                       <Font size="17.0" />
+                   </font>
+               <graphic>
+                  <ImageView fx:id="i" fitHeight="40.0" fitWidth="52.0" layoutX="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/inventory.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               </Button>
+            <Button fx:id="priButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#openPricingMenuBar" prefHeight="79.0" prefWidth="94.0" text="Pricing" textFill="#fcfcfc">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/pricing.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+
+         <Button fx:id="genButton" contentDisplay="TOP" graphicTextGap="5.0" mnemonicParsing="false" onAction="#openExpenceMenuBar" prefHeight="73.0" prefWidth="95.0" text="General" textFill="#fcfcfc">
+            <font>
+               <Font size="17.0" />
+            </font>
+            <graphic>
+               <ImageView fx:id="homeGeneralButton" fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: white;">
+                  <image>
+                     <Image url="@Images/general1.png" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
+         <Button fx:id="usersButton" contentDisplay="TOP" graphicTextGap="5.0" mnemonicParsing="false" onAction="#manageUsers" prefHeight="73.0" prefWidth="95.0" text="Users" textFill="#fcfcfc">
+            <font>
+               <Font size="17.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@Images/client2.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="companyButton" contentDisplay="TOP" graphicTextGap="5.0" mnemonicParsing="false" onAction="#openCompany" prefHeight="73.0" prefWidth="95.0" text="Company" textFill="#fcfcfc">
+            <font>
+               <Font size="17.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@Images/Company.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="allIconsButton" contentDisplay="TOP" graphicTextGap="5.0" mnemonicParsing="false" onAction="#showAllIcons" prefHeight="73.0" prefWidth="95.0" text="Show All" textFill="#fcfcfc">
+            <font>
+               <Font size="17.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@Images/modules.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+
+       </HBox>
+      <MenuBar fx:id="topMenuBar" layoutX="-2.0" prefHeight="32.0" prefWidth="1978.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="printSet" text="Print setup" />
+                <SeparatorMenuItem />
+              <MenuItem fx:id="passSet" text="Change password" />
+                <SeparatorMenuItem />
+              <MenuItem fx:id="close" text="Close" />
+            </items>
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/file.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Menu>
+          <Menu fx:id="modules" mnemonicParsing="false" text="Modules">
+            <items>
+              <MenuItem fx:id="modulesMenuItem" mnemonicParsing="false" text="Show modules" />
+            </items>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/modules.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="abtMenuItem" mnemonicParsing="false" text="About" />
+            </items>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/help.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Version 1.0" />
+        </menus>
+      </MenuBar>
+      <HBox fx:id="homeHbox" alignment="BOTTOM_LEFT" layoutY="811.0" prefHeight="32.0" prefWidth="730.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="83.0" text="User Name :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="userName" prefHeight="30.0" prefWidth="277.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox fx:id="infoHbox" layoutX="730.0" layoutY="811.0" prefHeight="32.0" prefWidth="476.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="82.0" text="System time">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLabel" prefHeight="30.0" prefWidth="115.0" />
+            <Label prefHeight="30.0" prefWidth="91.0" text="System date">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLabel" prefHeight="30.0" prefWidth="189.0" />
+         </children>
+      </HBox>
+<!--      <AnchorPane fx:id="homeTitleAnchor" layoutX="-2.0" layoutY="32.0" prefHeight="69.0" prefWidth="1978.0">-->
+<!--         <children>-->
+<!--             <Label fx:id="nameLabel" layoutX="642.0" layoutY="5.0" prefHeight="59.0" prefWidth="271.0" text="INVOICING AGGREGATE">-->
+<!--                 <font>-->
+<!--                     <Font size="25.0" />-->
+<!--                 </font>-->
+<!--             </Label>-->
+<!--         </children>-->
+<!--      </AnchorPane>-->
+      <HBox fx:id="homeButtonsHbox" alignment="CENTER_LEFT" layoutX="-2.0" layoutY="131.0" prefHeight="89.0" prefWidth="1978.0">
+         <children>
+            <Button fx:id="homeCostButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#openPricingPage" prefHeight="63.0" prefWidth="90.0" text="Cost">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/cost.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="homeLpoButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#openLposPage" prefHeight="63.0" prefWidth="90.0" text="LPOs">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/product1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="homeClientButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#manageClients" prefHeight="63.0" prefWidth="90.0" text="Clients">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/client2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="homeExpButton" contentDisplay="TOP" mnemonicParsing="false" prefHeight="63.0" prefWidth="90.0" text="Expenses">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/expenses.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="homeCnsButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#manageCreditNotes" prefHeight="63.0" prefWidth="90.0" text="CNRs">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/creditnote.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="homeTransporterButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#manageTransporters" prefHeight="74.0" prefWidth="105.0" text="Transporter">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Transporter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeQuotationButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#manageQuotation" prefHeight="74.0" prefWidth="94.0" text="Quotation">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/quotation.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeInvoiceButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#openInvoicingPage" prefHeight="74.0" prefWidth="105.0" text="Invoice">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/invoice.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeInfoButton" contentDisplay="TOP" mnemonicParsing="false" prefHeight="63.0" prefWidth="90.0" text="Info">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/invoice1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeGuideButton" contentDisplay="TOP" mnemonicParsing="false" prefHeight="63.0" prefWidth="90.0" text="Guide">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/productDetails.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeSuppliersButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#manageSupppliers" prefHeight="63.0" prefWidth="90.0" text="Suppliers">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Supplier.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeDeptButton" contentDisplay="TOP" graphicTextGap="5.0" mnemonicParsing="false" onAction="#manageDepartment" prefHeight="63.0" prefWidth="90.0" text="Depts">
+               <graphic>
+                  <ImageView fitHeight="49.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/department.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="homeProductListButton" contentDisplay="TOP" graphicTextGap="5.0" mnemonicParsing="false" onAction="#openNewProduct" prefHeight="63.0" prefWidth="90.0" text="List">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/product.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="homeProductButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#manageProductAnalyser" prefHeight="63.0" prefWidth="90.0" text="Product">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/product2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeStockButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#openStockPage" prefHeight="63.0" prefWidth="90.0" text="Stock">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/stock.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="homePriceListButton" contentDisplay="TOP" mnemonicParsing="false" prefHeight="63.0" prefWidth="90.0" text="Price List">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/pricelist.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeFraterButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#manageCompany" prefHeight="63.0" prefWidth="90.0" text="Manage">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/frater.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeRationButton" contentDisplay="TOP" mnemonicParsing="false" prefHeight="63.0" prefWidth="90.0" text="Ration">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/ration.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeTransferButton" contentDisplay="TOP" mnemonicParsing="false" prefHeight="63.0" prefWidth="90.0" text="Transfer">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/transfer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeReportsButton" contentDisplay="TOP" mnemonicParsing="false" prefHeight="63.0" prefWidth="90.0" text="Reports">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/stocklist.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeUsersButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#addUser" prefHeight="74.0" prefWidth="126.0" text="Manage Users">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/username.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+
+   </children>
+</AnchorPane>

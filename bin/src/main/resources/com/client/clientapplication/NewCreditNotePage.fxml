@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="cnsPageAnchor" prefHeight="597.0" prefWidth="940.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.NewCreditNotePageController">
+   <children>
+      <AnchorPane fx:id="cnsPageTitleAnchor" prefHeight="33.0" prefWidth="940.0">
+         <children>
+            <Label fx:id="cnsPageTitleLable" layoutX="14.0" layoutY="8.0" prefHeight="17.0" prefWidth="93.0" text="New Credit Note" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="newCnTableAnchor" layoutX="2.0" layoutY="226.0" prefHeight="368.0" prefWidth="934.0">
+         <children>
+            <TableView fx:id="cnTable" layoutX="3.0" layoutY="6.0" prefHeight="277.0" prefWidth="927.0">
+              <columns>
+                <TableColumn editable="false" prefWidth="124.0" text="Code">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="code" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="405.0" text="Description">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="description" />
+                   </cellValueFactory>
+                </TableColumn>
+                  <TableColumn editable="false" prefWidth="132.0" text="Quantity">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="quantity" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn editable="false" prefWidth="113.0" text="Cost">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="cost" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn editable="false" prefWidth="151.0" text="Total cost">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="totalCost" />
+                     </cellValueFactory>
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <Label layoutX="655.0" layoutY="288.0" prefHeight="35.0" prefWidth="108.0" text="Amount :" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newCnAmount" alignment="CENTER_RIGHT" editable="false" layoutX="763.0" layoutY="292.0" prefHeight="25.0" prefWidth="167.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="newCnSaveButton" layoutX="828.0" layoutY="331.0" mnemonicParsing="false" onAction="#generateCreditNote" prefHeight="25.0" prefWidth="102.0" text="Done">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/done.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="itemsDetailsAnchor" layoutX="2.0" layoutY="35.0" prefHeight="188.0" prefWidth="934.0" stylesheets="@styles.css">
+         <children>
+            <TextArea fx:id="newCnTextArea" layoutX="2.0" layoutY="119.0" prefHeight="64.0" prefWidth="305.0" />
+            <Label layoutX="5.0" layoutY="95.0" prefHeight="17.0" prefWidth="108.0" text="Comment" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label layoutX="375.0" layoutY="6.0" prefHeight="25.0" prefWidth="51.0" text="Code" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newCnCode" layoutX="375.0" layoutY="25.0" prefHeight="27.0" prefWidth="119.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="542.0" layoutY="6.0" prefHeight="25.0" prefWidth="76.0" text="Description" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newCnDescription" layoutX="542.0" layoutY="25.0" prefHeight="25.0" prefWidth="384.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="newCnQty" layoutX="375.0" layoutY="105.0" prefHeight="31.0" prefWidth="119.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="375.0" layoutY="82.0" prefHeight="25.0" prefWidth="51.0" text="Quatity" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newCnStock" editable="false" layoutX="542.0" layoutY="105.0" prefHeight="33.0" prefWidth="119.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="542.0" layoutY="82.0" prefHeight="25.0" prefWidth="51.0" text="Stock" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newCnCost" layoutX="675.0" layoutY="106.0" prefHeight="25.0" prefWidth="119.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="675.0" layoutY="82.0" prefHeight="25.0" prefWidth="51.0" text="Cost" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newCnTotalCost" layoutX="807.0" layoutY="105.0" prefHeight="25.0" prefWidth="119.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="807.0" layoutY="82.0" prefHeight="25.0" prefWidth="76.0" text="Total cost" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="newCnOkayutton" layoutX="850.0" layoutY="152.0" mnemonicParsing="false" onAction="#insertItemIntoCnTable" prefHeight="25.0" prefWidth="76.0" text="Okay" />
+            <Label layoutX="8.0" layoutY="7.0" text="Type" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="49.0" text="Entity" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="newCnCreditNteType" layoutX="57.0" layoutY="6.0" prefHeight="29.0" prefWidth="244.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="newCnEntytyFeild" layoutX="57.0" layoutY="50.0" prefHeight="32.0" prefWidth="244.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

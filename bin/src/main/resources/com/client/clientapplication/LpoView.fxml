@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="lpoViewAnchor" prefHeight="565.0" prefWidth="1024.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.LpoViewController">
+   <children>
+      <TableView fx:id="lpoTable" layoutX="5.0" layoutY="131.0" prefHeight="428.0" prefWidth="1012.0">
+         <columns>
+            <TableColumn fx:id="lpoDateCol" prefWidth="139.0" text="Date">
+               <cellValueFactory>
+                  <PropertyValueFactory property="dateRaised" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="branchCol" prefWidth="137.0" style="-fx-alignment: center-left;" text="Branch">
+               <cellValueFactory>
+                  <PropertyValueFactory property="branchName" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="91.0" style="-fx-alignment: center;" text="LPO Number">
+               <cellValueFactory>
+                  <PropertyValueFactory property="lpoNumber" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="246.0" style="-fx-alignment: center-left;" text="Supplier">
+               <cellValueFactory>
+                  <PropertyValueFactory property="supplier" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="amount" editable="false" minWidth="0.0" prefWidth="98.0" style="-fx-alignment: center-right;" text="Amount">
+               <cellValueFactory>
+                  <PropertyValueFactory property="amount" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="expDateCol" prefWidth="152.0" style="-fx-alignment: center;" text="Exp.Date">
+               <cellValueFactory>
+                  <PropertyValueFactory property="expiryDate" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="146.0" style="-fx-alignment: center;" text="Status">
+               <cellValueFactory>
+                  <PropertyValueFactory property="status" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <TextField fx:id="lpoViewLpoNumSearchText" layoutX="10.0" layoutY="98.0" prefHeight="26.0" prefWidth="218.0" promptText="Search by LPO No." />
+      <TextField fx:id="lpoViewLpoSupplierSearchText" layoutX="794.0" layoutY="98.0" prefHeight="26.0" prefWidth="218.0" promptText="Search by supplier" />
+      <DatePicker fx:id="dateFrom" layoutX="300.0" layoutY="98.0" promptText="Date from" style="-fx-alignment: center;" />
+      <DatePicker fx:id="dateTo" layoutX="511.0" layoutY="98.0" promptText="Date to" style="-fx-alignment: center;" />
+      <Label layoutX="263.0" layoutY="102.0" text="From" textFill="#f5f2f2">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="488.0" layoutY="101.0" text="To" textFill="#f2efef">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <HBox fx:id="lpoVbox" alignment="CENTER_LEFT" layoutX="3.0" layoutY="8.0" prefHeight="75.0" prefWidth="1012.0">
+         <children>
+            <Button fx:id="newLpoButton" contentDisplay="TOP" graphicTextGap="2.0" mnemonicParsing="false" onAction="#openLpoGenerator" prefHeight="66.0" prefWidth="85.0" text="New LPO">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/new.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="viewLpoButton" contentDisplay="TOP" graphicTextGap="2.0" mnemonicParsing="false" onAction="#viewLpo" prefHeight="67.0" prefWidth="85.0" text="View">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="150.0" onDragDetected="#viewLpo" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/view.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="editLpoButton" contentDisplay="TOP" graphicTextGap="2.0" mnemonicParsing="false" onAction="#editLpo" prefHeight="65.0" prefWidth="85.0" text="Edit">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="approveLpoButton" contentDisplay="TOP" graphicTextGap="2.0" mnemonicParsing="false" onAction="#exportTableData" prefHeight="65.0" prefWidth="85.0" text="Export ">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/approve.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="receiveLpoButton" contentDisplay="TOP" graphicTextGap="2.0" mnemonicParsing="false" onAction="#receiveAnLpo" prefHeight="65.0" prefWidth="85.0" text="Receive">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/receive.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="printLpoButton" contentDisplay="TOP" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="85.0" text="Re-print">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/print.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="deleteLpoButton" contentDisplay="TOP" graphicTextGap="2.0" mnemonicParsing="false" onAction="#deleteLpo" prefHeight="65.0" prefWidth="85.0" text="Delete">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="searchByDateButton" layoutX="694.0" layoutY="99.0" mnemonicParsing="false" onAction="#findLpoByDateRange" prefHeight="25.0" prefWidth="37.0">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

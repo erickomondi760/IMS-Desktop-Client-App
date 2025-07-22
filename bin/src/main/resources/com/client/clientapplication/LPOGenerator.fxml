@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="LPOGeneratorAnchor" prefHeight="680.0" prefWidth="1378.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.LPOGeneratorController">
+   <children>
+      <HBox fx:id="lpoGenHeadingHbox" alignment="CENTER_LEFT" layoutX="-2.0" prefHeight="28.0" prefWidth="1380.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="115.0" text="Purchase Center" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets top="2.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </HBox>
+      <AnchorPane fx:id="lpoGenBranchDetailsAnchor" layoutX="4.0" layoutY="32.0" prefHeight="122.0" prefWidth="574.0">
+         <children>
+            <Label fx:id="lpoGenDetailsLabel" layoutX="180.0" layoutY="1.0" prefHeight="27.0" prefWidth="211.0" text="Branch &amp; SupplierDetails">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="39.0" prefHeight="27.0" prefWidth="204.0" text="Order for branchName :" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="branchCombo" layoutX="229.0" layoutY="40.0" prefHeight="25.0" prefWidth="252.0">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Branch 1" />
+                     <String fx:value="Branch 2" />
+                     <String fx:value="Branch 3" />
+                     <String fx:value="Branch 4" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <Label layoutX="14.0" layoutY="81.0" prefHeight="27.0" prefWidth="147.0" text="Product Supplier :" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="supplierCombo" layoutX="229.0" layoutY="82.0" prefHeight="25.0" prefWidth="252.0" />
+         </children>
+      </AnchorPane>
+      <TitledPane animated="false" layoutX="4.0" layoutY="158.0" prefHeight="519.0" prefWidth="574.0" text="Product Details">
+        <content>
+          <AnchorPane fx:id="lpoGenProductSelectionAnchor" minHeight="0.0" minWidth="0.0" prefHeight="452.0" prefWidth="572.0">
+               <children>
+                  <TableView fx:id="productsTable" layoutX="3.0" layoutY="31.0" prefHeight="459.0" prefWidth="566.0">
+                    <columns>
+                      <TableColumn prefWidth="69.0" text="Code">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="code" />
+                          </cellValueFactory>
+                      </TableColumn>
+                        <TableColumn prefWidth="127.0" text="Barcode">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="barcode" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="283.0" text="Description">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="description" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="83.0" text="Cost">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="inclusive" />
+                           </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="searchBox" layoutX="330.0" layoutY="2.0" prefHeight="25.0" prefWidth="236.0" promptText="Search" />
+                  <CheckBox fx:id="checkBox" layoutX="301.0" layoutY="-4.0" mnemonicParsing="false" onAction="#searchItem" prefHeight="37.0" prefWidth="22.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <AnchorPane fx:id="lpoGenSeletionDetailsAnchor" layoutX="582.0" layoutY="32.0" prefHeight="253.0" prefWidth="791.0">
+         <children>
+            <Label fx:id="lpoGenSelectedProdDetailsLabel" layoutX="117.0" layoutY="1.0" prefHeight="27.0" prefWidth="323.0" text="Selected Product Details &amp; Order Terms">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="44.0" prefHeight="25.0" prefWidth="103.0" text="Date:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="124.0" layoutY="83.0" prefHeight="25.0" prefWidth="392.0" text="Deliveries will only be accepted from Monday to Friday" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="127.0" prefHeight="23.0" prefWidth="61.0" text="Code" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="173.0" prefHeight="17.0" prefWidth="61.0" text="Cost" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="code" layoutX="87.0" layoutY="128.0" prefHeight="27.0" prefWidth="211.0" />
+            <TextField fx:id="lpoGenCostIncxclusive" layoutX="87.0" layoutY="174.0" prefHeight="25.0" prefWidth="211.0" />
+            <TextField fx:id="lpoGenDescription" layoutX="469.0" layoutY="129.0" prefHeight="25.0" prefWidth="308.0" />
+            <Label layoutX="368.0" layoutY="128.0" prefHeight="27.0" prefWidth="103.0" text="Description" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="380.0" layoutY="174.0" prefHeight="27.0" prefWidth="78.0" text="Quantity" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="lpoGenQty" layoutX="469.0" layoutY="175.0" prefHeight="25.0" prefWidth="308.0" />
+            <Button fx:id="save" graphicTextGap="0.0" layoutX="716.0" layoutY="211.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="61.0" text="Save">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label layoutX="14.0" layoutY="216.0" text="Barcode" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="barcode" editable="false" layoutX="87.0" layoutY="217.0" prefHeight="27.0" prefWidth="211.0" />
+            <Label fx:id="date" alignment="CENTER_RIGHT" layoutX="117.0" layoutY="44.0" prefHeight="25.0" prefWidth="115.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <CheckBox fx:id="termsCheck" layoutX="469.0" layoutY="36.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Terms" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </CheckBox>
+            <TextField fx:id="lpoeneratorTermsText" alignment="CENTER" layoutX="559.0" layoutY="34.0" prefHeight="25.0" prefWidth="211.0" text="14">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children></AnchorPane>
+      <TableView fx:id="lpoGeneratedTable" layoutX="582.0" layoutY="286.0" prefHeight="320.0" prefWidth="791.0">
+        <columns>
+          <TableColumn prefWidth="66.0" text="Code">
+             <cellValueFactory>
+                <PropertyValueFactory property="code" />
+             </cellValueFactory>
+          </TableColumn>
+          <TableColumn prefWidth="83.0" text="Barcode">
+             <cellValueFactory>
+                <PropertyValueFactory property="barcode" />
+             </cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="182.0" text="Description">
+               <cellValueFactory>
+                  <PropertyValueFactory property="description" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="60.0" text="Qty">
+               <cellValueFactory>
+                  <PropertyValueFactory property="quantity" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="45.0" text="Units">
+               <cellValueFactory>
+                  <PropertyValueFactory property="units" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="104.0" text="Cost Exclusive">
+               <cellValueFactory>
+                  <PropertyValueFactory property="costExcl" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="60.0" text="Vat">
+               <cellValueFactory>
+                  <PropertyValueFactory property="vat" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="84.0" text="Cost Inclusive">
+               <cellValueFactory>
+                  <PropertyValueFactory property="CostIncl" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="105.0" text="Total Cost">
+               <cellValueFactory>
+                  <PropertyValueFactory property="total" />
+               </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="done" layoutX="1295.0" layoutY="640.0" mnemonicParsing="false" onAction="#saveLPO" prefHeight="30.0" prefWidth="78.0" text="Done">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/done.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="1124.0" layoutY="606.0" prefHeight="25.0" prefWidth="103.0" text="LPO Amount :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lpoAmountLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1227.0" layoutY="607.0" prefHeight="27.0" prefWidth="147.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Label>
+   </children>
+</AnchorPane>

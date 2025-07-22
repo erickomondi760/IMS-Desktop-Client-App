@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="searchTable" prefHeight="281.0" prefWidth="703.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.CreditNoteSearchTableController">
+   <children>
+      <AnchorPane fx:id="searchTableChildAnchor" layoutX="4.0" layoutY="2.0" prefHeight="276.0" prefWidth="696.0">
+         <children>
+            <TextField fx:id="searchTableSearchField" layoutX="4.0" layoutY="3.0" prefHeight="36.0" prefWidth="510.0" promptText="Enter supplier name" />
+            <TableView fx:id="searchTableView" layoutX="4.0" layoutY="40.0" prefHeight="199.0" prefWidth="689.0">
+              <columns>
+                <TableColumn prefWidth="688.0" text="Supplier">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="identity" />
+                   </cellValueFactory>
+                </TableColumn>
+              </columns>
+            </TableView>
+            <Button fx:id="searchTableDoneButton" layoutX="598.0" layoutY="239.0" mnemonicParsing="false" onAction="#setSelectedSupplierInSupplierField" prefHeight="24.0" prefWidth="95.0" text="Done">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/done.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

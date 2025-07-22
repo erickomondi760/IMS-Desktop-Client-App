@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="editCommentAnchor" prefHeight="285.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.EditCommentController">
+   <children>
+      <AnchorPane fx:id="editCommentInnerAnchor" layoutX="4.0" layoutY="4.0" prefHeight="277.0" prefWidth="592.0">
+         <children>
+            <Label fx:id="editCommentTitle" layoutX="210.0" layoutY="14.0" prefHeight="27.0" prefWidth="172.0" text="COMMENT EDITOR">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="130.0" prefHeight="27.0" prefWidth="80.0" text="Identity">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="193.0" prefHeight="27.0" prefWidth="90.0" text="User name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="editCommentText" layoutX="175.0" layoutY="123.0" prefHeight="38.0" prefWidth="315.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label fx:id="editCommentLabel" layoutX="175.0" layoutY="188.0" prefHeight="38.0" prefWidth="315.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="editCommentDoneButton" layoutX="498.0" layoutY="232.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="90.0" text="Done">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="26.0" layoutY="69.0" prefHeight="27.0" prefWidth="106.0" text="Comment Id">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="editCommentId" disable="true" layoutX="175.0" layoutY="63.0" prefHeight="38.0" prefWidth="315.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

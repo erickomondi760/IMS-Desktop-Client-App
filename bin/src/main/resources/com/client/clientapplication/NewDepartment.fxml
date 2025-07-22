@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="newDptAnchor" prefHeight="267.0" prefWidth="805.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.NewDepartmentController">
+   <children>
+      <AnchorPane fx:id="newDptTitleAnchor" layoutX="-2.0" layoutY="-1.0" prefHeight="38.0" prefWidth="807.0">
+         <children>
+            <Label layoutX="3.0" layoutY="10.0" prefHeight="25.0" prefWidth="128.0" text="New Department">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="newDptDetailsAnchor" layoutX="3.0" layoutY="40.0" prefHeight="225.0" prefWidth="799.0">
+         <children>
+            <Label layoutX="14.0" layoutY="64.0" text="Number">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newDeptName" layoutX="531.0" layoutY="58.0" prefHeight="39.0" prefWidth="261.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="430.0" layoutY="64.0" prefHeight="27.0" prefWidth="71.0" text="Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newDeptNumber" layoutX="121.0" layoutY="58.0" prefHeight="39.0" prefWidth="261.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="333.0" layoutY="14.0" text="Departmental Details" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="newDeptSaveButton" layoutX="700.0" layoutY="162.0" mnemonicParsing="false" onAction="#savingDepartment" prefHeight="41.0" prefWidth="92.0" text="Save">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/done.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="14.0" layoutY="149.0" text="Created Dpt.">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="createdDepartment" layoutX="121.0" layoutY="143.0" prefHeight="39.0" prefWidth="261.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

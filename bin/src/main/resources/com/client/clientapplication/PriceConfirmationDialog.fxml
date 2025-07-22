@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="priceConfirmationAnchor" prefHeight="476.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.PriceConfirmationController">
+   <children>
+      <Label layoutX="180.0" layoutY="40.0" prefHeight="30.0" prefWidth="245.0" text="Are all the values correct?">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="92.0" prefHeight="30.0" prefWidth="82.0" text="Code :" />
+      <Label fx:id="code" layoutX="160.0" layoutY="92.0" prefHeight="30.0" prefWidth="312.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="27.0" layoutY="132.0" prefHeight="30.0" prefWidth="82.0" text="Product name :" />
+      <Label fx:id="name" layoutX="160.0" layoutY="132.0" prefHeight="30.0" prefWidth="312.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="27.0" layoutY="182.0" prefHeight="30.0" prefWidth="82.0" text="Supplier :" />
+      <Label fx:id="supplier" layoutX="160.0" layoutY="182.0" prefHeight="30.0" prefWidth="312.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="27.0" layoutY="235.0" prefHeight="30.0" prefWidth="82.0" text="Exclusive costExclusive :" />
+      <Label fx:id="excl" layoutX="160.0" layoutY="235.0" prefHeight="30.0" prefWidth="312.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="27.0" layoutY="286.0" prefHeight="30.0" prefWidth="82.0" text="VAT :" />
+      <Label fx:id="vat" layoutX="160.0" layoutY="286.0" prefHeight="30.0" prefWidth="312.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="27.0" layoutY="343.0" prefHeight="30.0" prefWidth="82.0" text="Discount  :" />
+      <Label fx:id="disc" layoutX="160.0" layoutY="343.0" prefHeight="30.0" prefWidth="312.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="24.0" layoutY="407.0" prefHeight="30.0" prefWidth="82.0" text="Inclusive costExclusive :" />
+      <Label fx:id="incl" layoutX="160.0" layoutY="407.0" prefHeight="30.0" prefWidth="312.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Button fx:id="save" layoutX="472.0" layoutY="437.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Save" />
+      <Button fx:id="cancel" layoutX="534.0" layoutY="437.0" mnemonicParsing="false" text="Cancel" />
+   </children>
+</AnchorPane>

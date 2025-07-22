@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adjustmentReportMenueAnchor" prefHeight="333.0" prefWidth="379.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.AdjustmentReportMenueController">
+   <children>
+      <AnchorPane fx:id="adjustmentReportMenueTitleAnchor" layoutX="-1.0" layoutY="-2.0" prefHeight="53.0" prefWidth="385.0">
+         <children>
+            <Label layoutX="14.0" layoutY="12.0" text="Adjustment Report Menue">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="adjustmentReportMenueBodyAnchor" layoutX="3.0" layoutY="53.0" prefHeight="278.0" prefWidth="378.0">
+         <children>
+            <Button fx:id="adjustmentReportMenueButton" layoutX="290.0" layoutY="234.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="82.0" text="View">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/done.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <AnchorPane fx:id="adjustmentReportMenueDetailsAnchor" layoutX="5.0" layoutY="4.0" prefHeight="218.0" prefWidth="367.0">
+               <children>
+                  <fx:define>
+                     <ToggleGroup fx:id="menue" />
+                  </fx:define>
+                  <RadioButton fx:id="summaryRadioButton" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" text="Departmental Summary">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="menue" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="detailedRadioButton" layoutX="14.0" layoutY="96.0" mnemonicParsing="false" selected="true" text="Detailed Report" toggleGroup="$menue">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="dataRadioButton" layoutX="14.0" layoutY="169.0" mnemonicParsing="false" text="Adjustment Data" toggleGroup="$menue">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

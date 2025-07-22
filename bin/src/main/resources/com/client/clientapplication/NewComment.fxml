@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="newCommentAnchor" prefHeight="213.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.NewCommentController">
+   <children>
+      <AnchorPane fx:id="newCommentAnchor1" layoutX="4.0" layoutY="4.0" prefHeight="205.0" prefWidth="593.0">
+         <children>
+            <Label fx:id="newCommentTittleLabel" layoutX="191.0" layoutY="-1.0" prefHeight="30.0" prefWidth="224.0" text="Create a new comment">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="74.0" prefHeight="17.0" prefWidth="106.0" text="Identity">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newCommentTextField" layoutX="149.0" layoutY="69.0" prefHeight="40.0" prefWidth="318.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <Button fx:id="newCommentAdditionButton" layoutX="489.0" layoutY="156.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="97.0" text="Done">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/done.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

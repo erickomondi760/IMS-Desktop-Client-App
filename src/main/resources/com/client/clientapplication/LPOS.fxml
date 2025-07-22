@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="lpoAnchor" prefHeight="648.0" prefWidth="1036.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.clientapplication.LPOSController">
+    <children>
+        <Separator fx:id="lpoVertSeparetor" layoutX="8.0" layoutY="25.0" prefHeight="3.0" prefWidth="1020.0" />
+        <HBox fx:id="lpoTitleAnchor" layoutY="-2.0" prefHeight="27.0" prefWidth="1036.0">
+            <children>
+                <Label prefHeight="32.0" prefWidth="120.0" text="Purchase center" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <BorderPane fx:id="lpoBorderpane" layoutX="5.0" layoutY="30.0" prefHeight="614.0" prefWidth="1026.0">
+         <top>
+            <AnchorPane fx:id="lpoMunuesHbox" prefHeight="39.0" prefWidth="1026.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="lposButton" layoutX="6.0" layoutY="4.0" mnemonicParsing="false" onAction="#setLpoViewAnchor" prefHeight="28.0" prefWidth="99.0" text="LPOS" textFill="WHITE" />
+                  <Button fx:id="grnsAtWarehouseButton" layoutX="105.0" layoutY="4.0" mnemonicParsing="false" onAction="#viewGrnsAtHq" prefHeight="27.0" prefWidth="132.0" text="GRNS at warehouse" textFill="WHITE" />
+                  <Button fx:id="transitButton" layoutX="237.0" layoutY="4.0" mnemonicParsing="false" onAction="#viewTransitDocs" prefHeight="28.0" prefWidth="132.0" text="On transit" textFill="WHITE" />
+                  <Button fx:id="grnsAtBranchButton" layoutX="369.0" layoutY="4.0" mnemonicParsing="false" onAction="#viewGrnsAtBranch" prefHeight="28.0" prefWidth="149.0" text="GRNS at Branch" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </top></BorderPane>
+    </children>
+</AnchorPane>
