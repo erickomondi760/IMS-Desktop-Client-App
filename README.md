@@ -70,7 +70,8 @@ IMS-Desktop-Client-App/
 
 
 ### Inventory Page
-`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+![My image](Home page.png)
+
 
 ### LPO Editor
 `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
