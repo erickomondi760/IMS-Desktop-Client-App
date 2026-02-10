@@ -64,12 +64,22 @@ IMS-Desktop-Client-App/
 ---
 
 ## 📸 Screenshots
-The repository includes UI previews such as:
-- **Home Page**  
-- **Inventory Page**  
-- **LPO Editor**  
-- **Purchases & Credit Notes Page**  
-- **Sample Product Profile Report**  
+
+### Home Page
+![Alt text]([path/to/your/image.png](https://github.com/erickomondi760/IMS-Desktop-Client-App/blob/main/Home%20page.png))
+
+
+### Inventory Page
+`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+
+### LPO Editor
+`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+
+### Purchases & Credit Notes Page
+`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+
+### Sample Product Profile Report
+`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
 
 ---
 
