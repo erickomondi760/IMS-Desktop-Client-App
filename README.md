@@ -1,7 +1,3 @@
-Here’s your **README.md** updated with the correct image paths and descriptive captions under each screenshot. This way, the screenshots will render properly on GitHub and give readers context about what each page represents.
-
----
-
 # 🖥️ IMS Desktop Client App
 
 A **JavaFX-based Inventory Management System (IMS)** desktop client application. This project provides a graphical interface for managing inventory, purchase orders, credit notes, and product profiles, designed for businesses that need a lightweight desktop solution.
@@ -173,8 +169,3 @@ Contributions are welcome!
 ## 📜 License
 This project is licensed under the MIT License.
 
----
-
-✅ With these paths and captions, your screenshots will now render correctly on GitHub and give readers clear context.  
-
-Would you like me to also add a **“Demo Walkthrough” section** that strings these screenshots together into a narrative flow (e.g., “Start at Home → Manage Inventory → Generate LPO → Export Reports”), so new users can quickly understand the workflow?
