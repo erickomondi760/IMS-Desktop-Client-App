@@ -66,7 +66,7 @@ IMS-Desktop-Client-App/
 ## 📸 Screenshots
 
 ### Home Page
-![Alt text]([path/to/your/image.png](https://github.com/erickomondi760/IMS-Desktop-Client-App/blob/main/Home%20page.png))
+![Home]([Home page.png))
 
 
 ### Inventory Page
