@@ -69,41 +69,44 @@ IMS-Desktop-Client-App/
 
 ## 📸 Screenshots
 
+## 📸 Screenshots
+
 ### Home Page
-![Home](images/Home page.png)  
+![Home Page](images/Home%20page.png)  
 *The main dashboard providing quick access to core IMS features.*
 
 ### Inventory Page
-`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
+![Inventory Page](images/Inventory%20page.png)  
 *Displays current stock levels and allows adding, editing, or removing items.*
 
 ### LPO Editor
-`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
+![LPO Editor](images/LPO%20Editor.png)  
 *Interface for creating and editing Local Purchase Orders (LPOs).*
 
 ### LPOs Page
-`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
+![LPOs Page](images/LPOs%20Page.png)  
 *Shows a list of all generated LPOs with options to manage them.*
 
 ### Invoicing Page
-`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
+![Invoicing Page](images/Invoicing%20page.png)  
 *Handles customer invoicing and payment tracking.*
 
 ### Exporting LPOs
-`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
+![Exporting LPOs](images/Exporting%20lpos.png)  
 *Feature to export LPOs into external formats for reporting or sharing.*
 
 ### Generated LPO Report
-`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
+![Generated LPO Report](images/Generated%20LPO%20Report.png)  
 *Sample report generated from LPO data.*
 
 ### Company and Branch Manager Page
-`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
+![Company and Branch Manager Page](images/Company%20and%20branch%20manager%20page.png)  
 *Manages company details and branch manager assignments.*
 
 ### Sample Product Profile Report
-`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
+![Sample Product Profile Report](images/Sample%20product%20profile%20report.png)  
 *Detailed product profile report with inventory and transaction history.*
+
 
 ---
 
