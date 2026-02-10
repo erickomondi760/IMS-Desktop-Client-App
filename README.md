@@ -76,35 +76,35 @@ IMS-Desktop-Client-App/
 *The main dashboard providing quick access to core IMS features.*
 
 ### Inventory Page
-![Inventory Page](images/Inventory%20page.png)  
+![Inventory Page](src/images/Inventory%20page.png)  
 *Displays current stock levels and allows adding, editing, or removing items.*
 
 ### LPO Editor
-![LPO Editor](images/LPO%20Editor.png)  
+![LPO Editor](src/images/LPO%20Editor.png)  
 *Interface for creating and editing Local Purchase Orders (LPOs).*
 
 ### LPOs Page
-![LPOs Page](images/LPOs%20Page.png)  
+![LPOs Page](src/images/LPOs%20Page.png)  
 *Shows a list of all generated LPOs with options to manage them.*
 
 ### Invoicing Page
-![Invoicing Page](images/Invoicing%20page.png)  
+![Invoicing Page](src/images/Invoicing%20page.png)  
 *Handles customer invoicing and payment tracking.*
 
 ### Exporting LPOs
-![Exporting LPOs](images/Exporting%20lpos.png)  
+![Exporting LPOs](src/images/Exporting%20lpos.png)  
 *Feature to export LPOs into external formats for reporting or sharing.*
 
 ### Generated LPO Report
-![Generated LPO Report](images/Generated%20LPO%20Report.png)  
+![Generated LPO Report](src/images/Generated%20LPO%20Report.png)  
 *Sample report generated from LPO data.*
 
 ### Company and Branch Manager Page
-![Company and Branch Manager Page](images/Company%20and%20branch%20manager%20page.png)  
+![Company and Branch Manager Page](src/images/Company%20and%20branch%20manager%20page.png)  
 *Manages company details and branch manager assignments.*
 
 ### Sample Product Profile Report
-![Sample Product Profile Report](images/Sample%20product%20profile%20report.png)  
+![Sample Product Profile Report](src/images/Sample%20product%20profile%20report.png)  
 *Detailed product profile report with inventory and transaction history.*
 
 
