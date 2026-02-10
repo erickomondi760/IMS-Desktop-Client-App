@@ -66,7 +66,7 @@ IMS-Desktop-Client-App/
 ## 📸 Screenshots
 
 ### Home Page
-![Home](Home page.png)
+![Home](./Home page.png)
 
 
 ### Inventory Page
