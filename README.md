@@ -65,8 +65,6 @@ IMS-Desktop-Client-App/
 
 ## 📸 Screenshots
 
-## 📸 Screenshots
-
 ### Home Page
 ![Home Page](src/images/Home%20page.png)  
 *The main dashboard providing quick access to core IMS features.*
